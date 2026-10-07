@@ -38,6 +38,8 @@ To install on the phone and use the clipboard there, the app has to be served ov
 1. Push this folder to a GitHub repo.
 2. On <https://vercel.com>, choose **Add New → Project**, import the repo (Vite is detected automatically).
 3. Under **Environment Variables**, add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`, then click **Deploy**.
+   If you connected Supabase through Vercel's Supabase integration instead, its `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` variables are picked up automatically.
+   Env vars are baked in at build time, so **redeploy** after changing them.
 4. In Supabase, open **Authentication → URL Configuration** and set the **Site URL** to your Vercel URL.
 
 Netlify and Cloudflare Pages work too. Use build command `npm run build` and output folder `dist`.
